@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1d1f">
+  <title>Depuração e resolução de problemas com apoio de IA | Tudo sobre IA</title>
+  <meta name="description" content="Minicurso em vídeo para iniciantes em programação: reproduzir erros, formular hipóteses e usar uma IA com segurança para depurar código em Python.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#aula">Ir para a aula</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html">Tudo sobre IA</a>
+      <nav aria-label="Seções da página">
+        <ul>
+          <li><a href="#aula">Aula</a></li>
+          <li><a href="#aprender">Objetivos</a></li>
+          <li><a href="#avaliacao">Avaliação</a></li>
+          <li><a href="#referencias">Referências</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="wrap">
+        <a class="back" href="index.html">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Voltar ao início
+        </a>
+        <p class="trail">Trilha: Docência Digital na Era da IA</p>
+        <h1 id="titulo">Depuração e resolução de problemas com apoio de IA</h1>
+        <p class="lead">Aprenda a investigar erros de programação passo a passo e a usar uma IA sem aceitar tudo o que ela sugere.</p>
+        <ul class="meta">
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Criado por <a href="#autor">Matheus</a></span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>
+            <span id="meta-videos">5 vídeos, cerca de 29 minutos</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 20v-6M12 20V9M19 20V4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+            <span>Nível iniciante</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Demonstração em Python no Google Colab</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="aula" class="player wrap" aria-labelledby="aula-titulo">
+      <div class="stage">
+        <div class="video-frame" id="video-frame">
+          <noscript><p class="placeholder">Ative o JavaScript para assistir às aulas.</p></noscript>
+        </div>
+        <div class="lesson-head">
+          <h2 id="aula-titulo" aria-live="polite">Aula 1</h2>
+          <p id="aula-desc"></p>
+          <div class="lesson-actions">
+            <button type="button" id="prev" class="btn btn-ghost">Aula anterior</button>
+            <button type="button" id="next" class="btn">Concluir e avançar</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar" aria-labelledby="conteudo-titulo">
+        <div class="sidebar-head">
+          <h2 id="conteudo-titulo">Conteúdo do minicurso</h2>
+          <p id="progress-text" class="progress-text">0 de 5 aulas concluídas</p>
+          <progress id="progress" max="5" value="0" aria-labelledby="progress-text"></progress>
+        </div>
+        <ol id="lesson-list" class="lessons"></ol>
+        <a class="sidebar-foot" href="#avaliacao">Avaliação interativa</a>
+      </aside>
+    </section>
+
+    <div class="wrap content">
+      <section id="como-estudar" class="block" aria-labelledby="como-estudar-titulo">
+        <h2 id="como-estudar-titulo">Como estudar</h2>
+        <ol class="steps">
+          <li>Confira os requisitos abaixo e abra o <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab</a> em outra aba.</li>
+          <li>Assista às aulas na ordem. Pause nos trechos de código e reproduza no seu Colab.</li>
+          <li>Marque cada aula como concluída para acompanhar seu progresso.</li>
+          <li>Faça a avaliação interativa. Cada resposta traz um feedback explicando o porquê.</li>
+        </ol>
+      </section>
+
+      <section id="aprender" class="block" aria-labelledby="aprender-titulo">
+        <div class="learn-box">
+          <h2 id="aprender-titulo">O que você vai aprender</h2>
+          <ul class="checks">
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Reproduzir um erro de forma confiável, com os mesmos passos e o mesmo resultado.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Formular hipóteses sobre a causa do problema antes de mexer no código.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Compartilhar o contexto certo ao pedir ajuda a uma IA: código, erro e comportamento esperado.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Validar a sugestão da IA com testes antes de aplicá-la.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="requisitos" class="block" aria-labelledby="requisitos-titulo">
+        <h2 id="requisitos-titulo">Requisitos</h2>
+        <ul class="list">
+          <li>Lógica de programação básica: variáveis, condicionais e laços.</li>
+          <li>Já ter escrito código em alguma linguagem. Não é preciso saber depurar.</li>
+          <li>Um dispositivo com navegador e internet. Nada precisa ser instalado.</li>
+          <li>Uma conta Google para executar o código no Colab, caso queira acompanhar a demonstração na prática.</li>
+        </ul>
+      </section>
+
+      <section id="publico" class="block" aria-labelledby="publico-titulo">
+        <h2 id="publico-titulo">Para quem é este minicurso</h2>
+        <p>Para alunos iniciantes em programação que já entendem a lógica básica, mas ainda não têm um método para investigar erros e costumam pedir a uma IA que "conserte" o código sem entender a causa do problema.</p>
+      </section>
+
+      <section id="autor" class="block" aria-labelledby="autor-titulo">
+        <h2 id="autor-titulo">Sobre o autor</h2>
+        <div class="author">
+          <div class="avatar" aria-hidden="true">M</div>
+          <div>
+            <!-- Se quiser, coloque o nome completo aqui -->
+            <h3>Matheus</h3>
+            <p class="role">Estudante de Ciência da Computação na UFRPE e desenvolvedor full stack</p>
+            <p>Este minicurso é o projeto da 1ª VA, desenvolvido dentro da trilha Docência Digital na Era da IA.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="avaliacao" class="block" aria-labelledby="avaliacao-titulo">
+        <h2 id="avaliacao-titulo">Avaliação interativa</h2>
+        <div class="assess-box">
+          <p>Sete questões de múltipla escolha sobre o que foi ensinado nas aulas. Cada resposta mostra um feedback imediato explicando por que está certa ou errada. Assista às cinco aulas antes de começar.</p>
+          <a id="assessment-link" class="btn" href="#avaliacao">Fazer a avaliação</a>
+        </div>
+      </section>
+
+      <section id="referencias" class="block" aria-labelledby="referencias-titulo">
+        <h2 id="referencias-titulo">Referências</h2>
+        <ul class="refs">
+          <li>ZELLER, Andreas. <em>Why Programs Fail: A Guide to Systematic Debugging</em>. 2. ed. Burlington: Morgan Kaufmann, 2009.</li>
+          <li>PYTHON SOFTWARE FOUNDATION. <em>Errors and Exceptions</em>. Python 3 documentation. Disponível em: <a href="https://docs.python.org/3/tutorial/errors.html" target="_blank" rel="noopener noreferrer">https://docs.python.org/3/tutorial/errors.html</a>.</li>
+          <li>GOOGLE. <em>Google Colaboratory</em>. Disponível em: <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">https://colab.research.google.com/</a>.</li>
+          <li>ANTHROPIC. <em>Prompt engineering overview</em>. Disponível em: <a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener noreferrer">https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview</a>.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Tudo sobre IA, por Matheus. Projeto da 1ª VA, 2026.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
