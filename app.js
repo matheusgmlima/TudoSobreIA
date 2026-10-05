@@ -1,12 +1,10 @@
 "use strict";
 
 /* ==========================================================
-   EDITE AQUI
+   CONFIGURAÇÃO
    ========================================================== */
 
 const CONFIG = {
-  // Link da avaliação criada na Genially (deixe vazio enquanto não tiver)
-  assessmentUrl: "",
   storageKey: "minicurso-depuracao-ia",
 };
 
@@ -15,32 +13,26 @@ const LESSONS = [
   {
     title: "Abertura",
     minutes: 3,
-    youtubeId: "",
+    youtubeId: "PhIFdmPxEKc",
     description: "Apresentação do tema, dos objetivos do minicurso e de um erro real acontecendo na tela.",
   },
   {
     title: "Processo clássico de debug",
     minutes: 6,
-    youtubeId: "",
+    youtubeId: "SDFU-sIgesU",
     description: "Reproduzir o erro, isolar a causa, levantar uma hipótese e testá-la antes de mudar o código.",
   },
   {
     title: "IA como apoio",
     minutes: 5,
-    youtubeId: "",
+    youtubeId: "Q3ptNJD62H0",
     description: "O que compartilhar com a IA, o que evitar e como montar uma pergunta que leva a respostas melhores.",
   },
   {
-    title: "Demonstração prática no Colab",
-    minutes: 12,
-    youtubeId: "",
-    description: "Dois bugs em Python, um com mensagem de erro e outro silencioso, resolvidos com o processo completo.",
-  },
-  {
-    title: "Fechamento",
-    minutes: 3,
-    youtubeId: "",
-    description: "Recapitulação dos quatro passos e o cuidado de testar toda sugestão da IA antes de aceitar.",
+    title: "Demonstração prática e fechamento",
+    minutes: 14,
+    youtubeId: "zXVAVzBOYmg",
+    description: "Dois bugs em Python, um com mensagem de erro e outro silencioso, resolvidos com o processo completo. No fim, a recapitulação e o cuidado de testar toda sugestão da IA.",
   },
 ];
 
@@ -221,20 +213,6 @@ function setupNavigation() {
   });
 }
 
-function setupAssessment() {
-  const link = $("assessment-link");
-  if (CONFIG.assessmentUrl) {
-    link.href = CONFIG.assessmentUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = "Fazer a avaliação (abre em nova aba)";
-    return;
-  }
-  link.textContent = "Avaliação em breve";
-  link.setAttribute("aria-disabled", "true");
-  link.addEventListener("click", (event) => event.preventDefault());
-}
-
 function setupMeta() {
   const total = LESSONS.reduce((sum, lesson) => sum + lesson.minutes, 0);
   $("meta-videos").textContent = `${LESSONS.length} vídeos, cerca de ${total} minutos`;
@@ -244,7 +222,6 @@ function init() {
   loadState();
   buildList();
   setupNavigation();
-  setupAssessment();
   setupMeta();
   renderAll();
 }

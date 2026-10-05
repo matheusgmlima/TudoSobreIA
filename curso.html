@@ -45,7 +45,7 @@
           </li>
           <li>
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg>
-            <span id="meta-videos">5 vídeos, cerca de 29 minutos</span>
+            <span id="meta-videos">4 vídeos, cerca de 28 minutos</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 20v-6M12 20V9M19 20V4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
@@ -77,8 +77,8 @@
       <aside class="sidebar" aria-labelledby="conteudo-titulo">
         <div class="sidebar-head">
           <h2 id="conteudo-titulo">Conteúdo do minicurso</h2>
-          <p id="progress-text" class="progress-text">0 de 5 aulas concluídas</p>
-          <progress id="progress" max="5" value="0" aria-labelledby="progress-text"></progress>
+          <p id="progress-text" class="progress-text">0 de 4 aulas concluídas</p>
+          <progress id="progress" max="4" value="0" aria-labelledby="progress-text"></progress>
         </div>
         <ol id="lesson-list" class="lessons"></ol>
         <a class="sidebar-foot" href="#avaliacao">Avaliação interativa</a>
@@ -150,9 +150,9 @@
 
       <section id="avaliacao" class="block" aria-labelledby="avaliacao-titulo">
         <h2 id="avaliacao-titulo">Avaliação interativa</h2>
-        <div class="assess-box">
-          <p>Sete questões de múltipla escolha sobre o que foi ensinado nas aulas. Cada resposta mostra um feedback imediato explicando por que está certa ou errada. Assista às cinco aulas antes de começar.</p>
-          <a id="assessment-link" class="btn" href="#avaliacao">Fazer a avaliação</a>
+        <p class="assess-intro">Sete questões de múltipla escolha sobre o que foi ensinado nas aulas. Cada resposta mostra um feedback imediato explicando por que está certa ou errada. Assista às quatro aulas antes de começar.</p>
+        <div id="quiz" class="quiz">
+          <noscript><p>Ative o JavaScript para fazer a avaliação.</p></noscript>
         </div>
       </section>
 
@@ -175,5 +175,6 @@
   </footer>
 
   <script src="app.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>
