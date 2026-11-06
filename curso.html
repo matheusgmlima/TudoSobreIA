@@ -19,8 +19,9 @@
       <a class="brand" href="index.html">Tudo sobre IA</a>
       <nav aria-label="Seções da página">
         <ul>
-          <li><a href="#aula">Aula</a></li>
-          <li><a href="#aprender">Objetivos</a></li>
+          <li><a href="#aula">Aulas</a></li>
+          <li><a href="#ebook">eBook</a></li>
+          <li><a href="#infografico">Infográfico</a></li>
           <li><a href="#avaliacao">Avaliação</a></li>
           <li><a href="#referencias">Referências</a></li>
         </ul>
@@ -55,6 +56,10 @@
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>Demonstração em Python no Google Colab</span>
           </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M5 4h10a4 4 0 014 4v12H9a4 4 0 01-4-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <span>Inclui eBook e infográfico</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -81,6 +86,8 @@
           <progress id="progress" max="4" value="0" aria-labelledby="progress-text"></progress>
         </div>
         <ol id="lesson-list" class="lessons"></ol>
+        <a class="sidebar-foot" href="#ebook">eBook: guia de consulta</a>
+        <a class="sidebar-foot" href="#infografico">Infográfico de uma página</a>
         <a class="sidebar-foot" href="#avaliacao">Avaliação interativa</a>
       </aside>
     </section>
@@ -90,10 +97,43 @@
         <h2 id="como-estudar-titulo">Como estudar</h2>
         <ol class="steps">
           <li>Confira os requisitos abaixo e abra o <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Google Colab</a> em outra aba.</li>
-          <li>Assista às aulas na ordem. Pause nos trechos de código e reproduza no seu Colab.</li>
-          <li>Marque cada aula como concluída para acompanhar seu progresso.</li>
-          <li>Faça a avaliação interativa. Cada resposta traz um feedback explicando o porquê.</li>
+          <li>Assista às quatro aulas na ordem. Pause nos trechos de código e reproduza no seu Colab. Marque cada aula como concluída.</li>
+          <li>Leia o <a href="#ebook">eBook</a>. Ele repete o método das aulas, com exemplos e exercícios para você praticar.</li>
+          <li>Guarde o <a href="#infografico">infográfico</a>. É uma página para ter ao lado quando o código der erro.</li>
+          <li>Faça a <a href="#avaliacao">avaliação interativa</a>. Cada resposta traz um feedback explicando o porquê.</li>
         </ol>
+      </section>
+
+      <section id="ebook" class="block" aria-labelledby="ebook-titulo">
+        <h2 id="ebook-titulo">eBook: guia de consulta</h2>
+        <p>Depois das aulas, use o eBook para revisar o método e praticar. São 16 páginas, com os 4 passos do debug, como ler um erro, os 5 erros mais comuns, como pedir ajuda à IA e 4 exercícios com gabarito.</p>
+        <div class="embed-frame">
+          <iframe src="https://online.fliphtml5.com/qglyg/guia-consulta-depuracao-ia/" title="eBook: Guia de consulta de depuração com apoio de IA" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://online.fliphtml5.com/qglyg/guia-consulta-depuracao-ia/" target="_blank" rel="noopener noreferrer">Abrir em tela cheia</a>
+          <a class="btn btn-ghost" href="materiais/guia-consulta-depuracao-ia.pdf" download>Baixar em PDF</a>
+        </div>
+        <p class="note">Prefere texto selecionável e leitura com leitor de tela? Baixe o PDF.</p>
+      </section>
+
+      <section id="infografico" class="block" aria-labelledby="infografico-titulo">
+        <h2 id="infografico-titulo">Infográfico: debug com apoio de IA</h2>
+        <p>Uma página para consultar na hora do erro. Mostra os 4 passos, o que mandar e o que nunca colar numa IA, e os 3 testes antes de aceitar a resposta.</p>
+        <a class="infog-link" href="materiais/infografico-debug-ia.png" target="_blank" rel="noopener noreferrer">
+          <img class="infog" src="materiais/infografico-debug-ia.png" width="2480" height="3508" loading="lazy" alt="Infográfico Debug com apoio de IA, em uma página: os 4 passos (reproduzir, isolar, hipótese, testar), o que mandar e o que nunca colar ao pedir ajuda para a IA, e os 3 tipos de teste (normal, limite e estranho) antes de aceitar a resposta. A descrição completa está logo abaixo.">
+        </a>
+        <div class="actions">
+          <a class="btn" href="materiais/infografico-debug-ia.png" target="_blank" rel="noopener noreferrer">Abrir em tamanho grande</a>
+          <a class="btn btn-ghost" href="materiais/infografico-debug-ia.pdf" download>Baixar em PDF</a>
+        </div>
+        <details class="alt-text">
+          <summary>Ler a descrição do infográfico em texto</summary>
+          <p><strong>Os 4 passos.</strong> 1 Reproduzir: repita o erro, igual. 2 Isolar: reduza ao menor caso. 3 Hipótese: uma causa, uma frase. 4 Testar: confirme com print. Se descartar a hipótese, volte ao passo 3. Sem erro na tela, anote o que esperava e o que obteve.</p>
+          <p><strong>Ao pedir ajuda para a IA.</strong> Mande o que você queria, só o trecho com o problema, o erro completo, e o que já testou com a hipótese. Nunca cole senhas, chaves e tokens, dados pessoais, nem código sem permissão. Troque por valores falsos. Peça a causa e como testar, não só "conserta".</p>
+          <p><strong>Antes de aceitar a resposta, teste 3 tipos de entrada.</strong> Exemplo: uma função que calcula o preço com desconto, para um produto de R$ 200. Normal (o uso do dia a dia): desconto de 10% devolve R$ 180. Limite (o menor e o maior valor aceito): desconto de 0% devolve R$ 200 e desconto de 100% devolve R$ 0. Estranho (um valor que não deveria chegar): desconto de 150% devolve R$ -100, um preço negativo, o que mostra um problema. Decidir o que fazer é com você.</p>
+          <p><strong>Confira.</strong> Entendi a causa. O caso original funciona. Mudou só o necessário.</p>
+        </details>
       </section>
 
       <section id="aprender" class="block" aria-labelledby="aprender-titulo">
@@ -150,7 +190,7 @@
 
       <section id="avaliacao" class="block" aria-labelledby="avaliacao-titulo">
         <h2 id="avaliacao-titulo">Avaliação interativa</h2>
-        <p class="assess-intro">Sete questões de múltipla escolha sobre o que foi ensinado nas aulas. Cada resposta mostra um feedback imediato explicando por que está certa ou errada. Assista às quatro aulas antes de começar.</p>
+        <p class="assess-intro">Sete questões de múltipla escolha sobre o que foi ensinado nas aulas. Cada resposta mostra um feedback imediato explicando por que está certa ou errada. Assista às aulas e leia o eBook antes de começar.</p>
         <div id="quiz" class="quiz">
           <noscript><p>Ative o JavaScript para fazer a avaliação.</p></noscript>
         </div>
